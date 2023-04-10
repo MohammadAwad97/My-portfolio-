@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --white: #ffff;
+  --blue: blue;
+  --purple: #601cfc;
+  --pink-red: #c42348;
+  --pink: #ef7674;
+  --black: black;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box; /*By Default = content box but we don't want this */
+  scroll-behavior: smooth; /* Makes the scroll very gentle */
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+  height: 75px;
+  line-height: 75px;
+  background-color: #c42348;
+  z-index: 999;
+}
+
+nav .navlogo {
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+nav .nav-list {
+  display: flex;
+}
+
+nav .nav-list li {
+  display: flex;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 30px;
+  transition: 0.4s;
+}
+
+nav .nav-list li:hover {
+  background-color: #ef7674;
+}
+
+nav .nav-list .nav-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* toggle bar */
+
+nav .navbar-toggler {
+  display: none;
+  height: min-content;
+  margin: 18px -10px 0 0;
+  cursor: pointer;
+}
+
+nav .navbar-toggler .bar {
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 10%;
+  transition: 0.4s;
+}
+
+input {
+  display: none;
+}
+
+/* input:checked ~ nav .nav-list {
+  transform: translateY(0);
+} */
+
+/* Sections------------------------------ */
+section {
+  padding: 100px 100px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url(/Images/pic2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.main h2 {
+  color: var(--black);
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.main h2 span {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+.main h3 {
+  color: var(--black);
+  font-size: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  line-height: 1.5em;
+}
+
+.main-btn {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--pink-red);
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 0.8em 1.8em;
+  display: inline-block; /* so we can give it margin */
+  margin-bottom: 5px;
+  border: 1px solid var(--pink);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--pink-red);
+  transition: 0.5s ease;
+}
+
+.main-btn:hover {
+  background-color: var(--pink);
+  padding: 0.92em 2em; /*Or transform :scale: (1.1 on x and y);*/
+  transition: 0.5s ease;
+}
+
+.social-icons {
+  margin-top: 0.92em;
+}
+
+.social-icons a {
+  margin-right: 0.8em;
+  font-size: 1.7em;
+}
+
+.icons-aside {
+  background-color: var(--pink);
+  position: fixed;
+  right: 0px;
+  width: 1.8em;
+  min-height: 190px;
+  padding: 0 2px;
+  border-radius: 5px 0 0 5px;
+  margin-top: 2.5em;
+  transition: 1s ease;
+}
+
+.show {
+  display: none;
+  transition: 1s ease;
+}
+
+.icons-aside:hover .show {
+  position: absolute;
+  font-size: 0.7em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--pink-red);
+  transition: 1.5s ease;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.icons-aside:hover {
+  background-color: var(--pink);
+  position: fixed;
+  right: 0px;
+  width: 10em;
+  min-height: 190px;
+  padding: 0 2px;
+  border-radius: 5px 0 0 5px;
+  margin-top: 2.5em;
+  transition: 1s ease;
+  text-decoration: none;
+}
+
+.icons-aside a {
+  display: block;
+  font-size: 2em;
+}
+/* -------------------section #2 --------------------------------------------------------- */
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.aboutpic h2 {
+  color: var(--pink-red);
+  margin-bottom: 30px;
+  margin-left: 20px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.aboutpic img {
+  margin-bottom: 30px;
+  border: 5px solid var(--black);
+  border-radius: 50%;
+  width: 20vw;
+}
+
+.preif p {
+  margin-left: 40px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  line-height: 1.8em;
+}
+
+.preif a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: var(--pink-red);
+  font-weight: 500;
+}
+
+.preif a:hover {
+  margin-left: 40px;
+  text-decoration: none;
+  color: var(--purple);
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+.title {
+  display: flex; /* so we can Locate it's position in the center*/
+  justify-content: center;
+  margin-bottom: 30px;
+  color: var(--pink-red);
+}
+.info {
+  text-align: center;
+}
+
+.info h3 {
+  font-weight: 500;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.icon i {
+  font-size: 10em;
+  margin-left: 20px;
+}
+
+.myprojects {
+  background-image: linear-gradient(white, rgba(196, 35, 72, 90%));
+}
+
+.myprojects .content {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 2px solid black;
+  min-height: 14em; /*قابل للزيادة*/
+  width: 19em;
+  border-radius: 10px;
+  margin: 30px;
+  transition: 0.7s ease;
+}
+.project-card:hover {
+  transform: scale(1.1);
+}
+
+.project-img img {
+  width: 100%;
+}
+
+.project-card:hover .project-img {
+  opacity: 0.9;
+}
+
+.project-info {
+  padding: 10px;
+}
+.project-category {
+  font-size: 1.4em;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.title1 {
+  color: var(--pink-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  margin-top: 20px;
+  font-weight: 800;
+}
+
+.more-details {
+  text-decoration: none;
+  color: var(--purple);
+}
+
+.more-details:hover {
+  color: var(--pink-red);
+}
+
+/* Contact------------------------------------------- */
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.contact img {
+  width: 36vw;
+  border-radius: 20px;
+  margin-bottom: 100px;
+}
+
+.form {
+  border: 2px solid var(--pink-red);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 33vw;
+  min-height: 15vh;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-top: 50px;
+}
+
+.form p {
+  color: #601cfc;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.form input {
+  margin-bottom: 30px;
+  width: 30vw;
+  border: none;
+  border-bottom: 2px solid var(--pink);
+}
+
+.form .myphone-email {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.7em;
+  color: var(--black);
+  line-height: 5px;
+}
+
+.form .btnform {
+  padding: 8px;
+  width: 10vw;
+  padding-right: 5px;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: var(--white);
+  background-color: var(--pink-red);
+}
+
+/* Footer-------------------------------------------- */
+.footer {
+  background-color: var(--pink);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  border-top: black 1px solid;
+}
+
+.footer p {
+  font-size: 1.5em;
+  margin-top: 20px;
+  font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: oblique;
+}
+
+.footer-name {
+  color: var(--black);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.footer .social-icons {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+/* Bootstrap */
+
+/*Media query*/
+
+@media (max-width: 1150px) {
+  .main h2 {
+    font-size: 1.3em;
+  }
+  .main h2 span {
+    font-size: 1.2em;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 900px) {
+  header .logo {
+    font-size: 1.2em;
+  }
+
+  .navigation a {
+    font-size: 0.8em;
+  }
+
+  .main h2 {
+    font-size: 1em;
+  }
+  .main h2 span {
+    font-size: 1.1em;
+  }
+
+  .form .btnform {
+    font-size: 0.7em;
+  }
+
+  .contact img {
+    width: 80%;
+  }
+
+  .form {
+    min-width: 80%;
+  }
+}
+
+/* put 789px width */
+
+@media (max-width: 790px) {
+  .main {
+    background-image: url(/Images/tall.jpg);
+  }
+
+  nav .nav-list {
+    display: grid;
+    position: absolute;
+    background-color: #c42348;
+    width: 100%;
+    top: 75px;
+    left: 0;
+    transform: translateY(-120%);
+    z-index: -100;
+    transition: 0.6s;
+  }
+
+  nav .navlogo {
+    font-size: 1.8em;
+  }
+
+  nav .navbar-toggler {
+    display: grid !important;
+  }
+
+  input:checked ~ nav .nav-list {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 550px) {
+  .main h2 {
+    font-size: 0.8em;
+  }
+
+  .main h3 {
+    font-size: 0.7em;
+  }
+
+  .about .aboutpic {
+    margin-left: 40px;
+  }
+  section {
+    padding-left: 20px;
+  }
+
+  .main .main-btn {
+    font-size: 1em;
+  }
+}
